@@ -1,0 +1,149 @@
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import logo from "../img/logo.svg";
+import Badge from "./Badge";
+
+const Navigation = () => {
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const toggleNav = () => {
+    setToggleMenu(!toggleMenu);
+   
+  };
+
+  useEffect(() => {
+    const changeWidth = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", changeWidth);
+
+    return () => {
+      window.removeEventListener("resize", changeWidth);
+    };
+  }, []);
+
+  return (
+    <StyledNav>
+      <div className="logo">
+        <img src={logo} alt="" />
+      </div>
+
+      {(toggleMenu || screenWidth > 952) && (
+        
+        <ul>
+          <li>
+            <a href="">Saturn Earn</a>{" "}
+          </li>
+          <li>
+            <a href="">Saturn Ramp</a>{" "}
+          </li>
+          <li className="badge">
+            <a href="">
+              SDK/API Docs <Badge text="coming soon" />
+            </a>{" "}
+          </li>
+          <li className="badge">
+            <a href="">
+              Saturn Escrow Docs <Badge text="coming soon" />
+            </a>{" "}
+          </li>
+          <li>
+            <a href="">Contact Us</a>
+          </li>
+        </ul>
+      )}
+
+      <button onClick={toggleNav} className="checkbtn">
+        <i className="fa fa-bars "></i>
+      </button>
+    </StyledNav>
+  );
+};
+
+const StyledNav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  min-height: 10vh;
+  align-items: center;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  a:hover,
+  a:hover {
+    background: #5465ff;
+    transition: 0.5s;
+  }
+
+  .badge a {
+    display: inline-flex;
+    align-items: center;
+    // justify-content: space-around;
+  }
+
+  .checkbtn {
+    font-size: 30px;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    color: white;
+  }
+
+  .checkbtn {
+    display: none;
+  }
+
+  @media (max-width: 1200px) {
+    ul {
+      width: 85%;
+    }
+  }
+
+  @media (max-width: 952px) {
+    .checkbtn {
+      display: block;
+    }
+
+    ul {
+      position:relative;
+      width: 100%;
+      height: 100vh;
+      background: #5465ff;
+      top: 100px;
+      left: 0;
+      text-align: center;
+      transition: all 0.5s;
+    }
+
+    ul {
+      display: block;
+    }
+
+    ul li a {
+      font-size: 17px;
+    }
+
+    ul li {
+      margin: 1rem 0;
+    }
+
+    a:hover,
+    a:active {
+      background: none;
+      color: #5465ff;
+    }
+`;
+
+export default Navigation;
