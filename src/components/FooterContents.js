@@ -14,26 +14,26 @@ const FooterContents = () => {
           <div className="left-left-content">
             <ul>
               <li>
-                <a href="">Saturn Earn</a>
+                <a href="#">Saturn Earn</a>
               </li>
               <li>
-                <a href="">Saturn Ramp</a>
+                <a href="#">Saturn Ramp</a>
               </li>
               <li>
-                <a href="">SDK/API Docs (coming soon)</a>
+                <a href="#">SDK/API Docs (coming soon)</a>
               </li>
               <li>
-                <a href="">Saturn Escrow Docs (coming soon)</a>
+                <a href="#">Saturn Escrow Docs (coming soon)</a>
               </li>
             </ul>
           </div>
           <div className="right-left-content">
             <ul>
               <li>
-                <a href="">Login</a>
+                <a href="#">Login</a>
               </li>
               <li>
-                <a href="">Contact Us</a>
+                <a href="#">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -83,9 +83,8 @@ const StyledFooterContent = styled.section`
   }
 
   @media (max-width: 768px) {
-    
-      font-size: 12px;
-    
+    font-size: 12px;
+
     .left-content {
       flex-direction: column;
     }
@@ -98,7 +97,5 @@ const StyledFooterContent = styled.section`
       text-align: center;
     }
   }
-
-  
 `;
 export default FooterContents;

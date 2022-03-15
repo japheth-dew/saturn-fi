@@ -19,19 +19,19 @@ const Navigation = () => {
         </div>
 
         <nav ref={navRef}>
-          <a href="">Saturn Earn</a>
+          <a href="#">Saturn Earn</a>
 
-          <a href="">Saturn Ramp</a>
+          <a href="#">Saturn Ramp</a>
 
-          <a className="badge" href="">
+          <a className="badge" href="#">
             SDK/API Docs <Badge text="coming soon" />
           </a>
 
-          <a className="badge" href="">
+          <a className="badge" href="#">
             Saturn Escrow Docs <Badge text="coming soon" />
           </a>
 
-          <a href="">Contact Us</a>
+          <a href="#">Contact Us</a>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes />
           </button>
