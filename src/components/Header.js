@@ -24,7 +24,7 @@ const HeaderStyled = styled.header`
 
   .wave img {
     width: 100%;
-    height: 10rem;
+//     height: 10rem;
   }
 
   @media (max-width: 1024px){
