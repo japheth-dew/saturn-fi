@@ -149,6 +149,15 @@ const StyledForm = styled.div`
 
   @media (max-width: 480px) {
     width: 90%;
+    
+    .details .space {
+    margin-right: 0; 
+  }
+    .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   }
 `;
 export default Form;
