@@ -83,6 +83,12 @@ const StyledShowCase = styled.section`
       display: none;
     }
   }
+  
+  @media (max-width: 480px){
+   .showcase{
+   margin: 5rem 0 0 0;
+    }
+    }
 `;
 
 export default ShowCase;
