@@ -34,7 +34,7 @@ const HeaderStyled = styled.header`
   @media (max-width: 480px){
   .wave {
     margin-top: 60vh;
-    margin-bottom: 10rem;
+    margin-bottom: 14rem;
   }
 }
 `;
