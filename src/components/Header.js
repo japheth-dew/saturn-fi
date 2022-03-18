@@ -30,6 +30,12 @@ const HeaderStyled = styled.header`
   @media (max-width: 1024px){
     // margin-top: 90vh;
   }
+  
+  @media (max-width: 480px){
+  .wave {
+    margin-top: 60vh;
+  }
+}
 `;
 
 export default Header;
