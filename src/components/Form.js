@@ -154,9 +154,10 @@ const StyledForm = styled.div`
     margin-right: 0; 
   }
     .details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: block;
+  }
+   .details .field {
+    width: 100%;
   }
   }
 `;
